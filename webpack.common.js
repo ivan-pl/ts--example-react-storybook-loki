@@ -5,7 +5,7 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    app: path.join(__dirname, "src", "index.ts"),
+    app: path.join(__dirname, "src", "index.tsx"),
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -15,12 +15,12 @@ module.exports = {
     },
   },
   resolve: {
-    extensions: [".ts", ".js"],
+    extensions: [".ts", ".js", ".tsx"],
   },
   module: {
     rules: [
       {
-        test: /\.(js|ts)$/,
+        test: /\.(js|tsx?)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
