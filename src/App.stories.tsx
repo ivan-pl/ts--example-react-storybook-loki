@@ -1,13 +1,13 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from "react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import App from './App';
+import App from "./App";
 
 export default {
-  title: 'Example/Header',
+  title: "App",
   component: App,
   parameters: {
-    layout: 'fullscreen',
+    layout: "fullscreen",
   },
 } as ComponentMeta<typeof App>;
 
