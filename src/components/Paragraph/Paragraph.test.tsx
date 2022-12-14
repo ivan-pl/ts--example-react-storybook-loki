@@ -30,8 +30,6 @@ describe("Paragraph", () => {
       screen.getByText(defaultTemplate).classList.contains(Styles.Bold)
     ).toBeTruthy();
 
-    screen.debug();
-
     rerender(<Paragraph fontStyle={Styles.Quote} />);
     expect(
       screen.getByText(defaultTemplate).classList.contains(Styles.Quote)
