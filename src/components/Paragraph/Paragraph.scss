@@ -1,0 +1,22 @@
+.regular {
+  font-weight: 400;
+  font-style: normal;
+}
+
+.quote {
+  font-weight: 400;
+  font-style: italic;
+
+  &::before {
+    content: '"';
+  }
+
+  &::after {
+    content: '"';
+  }
+}
+
+.bold {
+  font-weight: 700;
+  font-style: normal;
+}

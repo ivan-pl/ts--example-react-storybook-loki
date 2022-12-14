@@ -1,5 +1,7 @@
 import React, { FC } from "react";
 
+import "./Paragraph.scss";
+
 import { Styles } from "./types";
 
 export interface Props {
