@@ -1,28 +1,17 @@
 import { SupportedComponents } from "../types/supportedComponents";
-
-const supportedComponents = [
-  "Details",
-  "Heading",
-  "HorizontalLine",
-  "Image",
-  "Paragraph",
-];
+import { supportedComponents } from "./variables";
+import { ComponentInfo } from "./types";
 
 const parsePropRegex = /(\w+?)="(.+?)";/g;
 
 function isSupported(
   componentName: string
 ): componentName is SupportedComponents {
-  return supportedComponents.includes(componentName);
+  return (supportedComponents as unknown as string[]).includes(componentName);
 }
 
-export type ComponentInfo = {
-  componentName: typeof supportedComponents[number];
-  props: { [P: string]: string };
-} | null;
-
 // takes a command like `Details | content="some content"; title="some title";`
-export default function parseCommand(command: string): ComponentInfo {
+export default function parseCommand(command: string): ComponentInfo | null {
   const [componentName, propString = ""] = command.split(" | ");
   if (isSupported(componentName)) {
     const result: ComponentInfo = { componentName, props: {} };
