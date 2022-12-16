@@ -1,3 +1,7 @@
+hr {
+  height: 1px; // fix loki (throws errors on 0 height)
+}
+
 .solid-line {
   border-top: 1px solid;
 }
