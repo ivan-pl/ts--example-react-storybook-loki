@@ -7,6 +7,7 @@ import { Styles } from "./types";
 export interface Props {
   fontStyle?: Styles;
   children?: React.ReactNode;
+  text?: string;
 }
 
 const defaultProps: Props = {
@@ -14,8 +15,8 @@ const defaultProps: Props = {
   fontStyle: Styles.Regular,
 };
 
-export const Paragraph: FC<Props> = ({ children, fontStyle }) => {
-  return <p className={fontStyle}>{children}</p>;
+export const Paragraph: FC<Props> = ({ children, fontStyle, text }) => {
+  return <p className={fontStyle}>{text || children}</p>;
 };
 
 Paragraph.defaultProps = defaultProps;

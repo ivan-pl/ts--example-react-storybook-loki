@@ -16,13 +16,15 @@ export const Instruction: FC<Props> = () => {
         properties if they needed. Prompt is called until you enter an empty
         input. <br />
         You can use the following components:
-        <ul>
-          <li>Image</li>
-          <li>Details</li>
-          <li>Paragraph</li>
-          <li>Heading</li>
-          <li>HorizontalLine</li>
-        </ul>
+      </p>
+      <ul>
+        <li>Image</li>
+        <li>Details</li>
+        <li>Paragraph</li>
+        <li>Heading</li>
+        <li>HorizontalLine</li>
+      </ul>
+      <p>
         Information about props is available in the{" "}
         <a href="https://ivan-pl.github.io/ts--example-react-storybook-loki/">
           storybook

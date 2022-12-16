@@ -35,4 +35,18 @@ describe("Paragraph", () => {
       screen.getByText(defaultTemplate).classList.contains(Styles.Quote)
     ).toBeTruthy();
   });
+
+  it("supports text prop", () => {
+    const text = "Some string";
+    render(<Paragraph text={text} />);
+    expect(screen.getByText(text)).toBeInTheDocument();
+  });
+
+  it("ignores children if it has text prop", () => {
+    const text = "Some text";
+    const children = "Some children";
+    render(<Paragraph text={text}></Paragraph>);
+    expect(screen.getByText(text)).toBeInTheDocument();
+    expect(screen.queryByText(children)).not.toBeInTheDocument();
+  });
 });

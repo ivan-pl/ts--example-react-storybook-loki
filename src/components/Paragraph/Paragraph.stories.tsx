@@ -9,7 +9,7 @@ export default {
   title: "Paragraph",
   component: Paragraph,
   argTypes: {
-    children: {
+    text: {
       type: {
         name: "string",
       },
@@ -26,11 +26,11 @@ export const Default = Template.bind({});
 export const Quote = Template.bind({});
 Quote.args = {
   fontStyle: Styles.Quote,
-  children: "Very wise quote",
+  text: "Very wise quote",
 };
 
 export const Bold = Template.bind({});
 Bold.args = {
   fontStyle: Styles.Bold,
-  children: "Bold text",
+  text: "Bold text",
 };

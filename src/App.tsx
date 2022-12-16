@@ -2,7 +2,6 @@ import React, {
   FC,
   ReactElement,
   useEffect,
-  useLayoutEffect,
   useState,
 } from "react";
 import Instruction from "./components/Instruction";
