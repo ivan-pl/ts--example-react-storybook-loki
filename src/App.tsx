@@ -1,9 +1,6 @@
-import React, {
-  FC,
-  ReactElement,
-  useEffect,
-  useState,
-} from "react";
+import React, { FC, ReactElement, useEffect, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
+
 import Instruction from "./components/Instruction";
 import parseCommand from "./utils/parseCommand";
 import createComponent from "./utils/createComponent";
@@ -23,6 +20,7 @@ const App: FC = () => {
         command = prompt("Enter a command");
         continue;
       }
+      componentInfo.props.key = uuidv4();
 
       const newComponent = createComponent(componentInfo);
       if (newComponent) {

@@ -1,5 +1,5 @@
 import React from "react";
-import { ComponentInfo, SupportedComponents } from "./types";
+import { ComponentInfo } from "./types";
 import Details from "../components/Details";
 import Heading from "../components/Heading";
 import HorizontalLine from "../components/HorizontalLine";

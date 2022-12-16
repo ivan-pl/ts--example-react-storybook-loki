@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { act, render, screen } from "@testing-library/react";
 
 import App from "./App";
 
@@ -24,8 +24,10 @@ describe("App", () => {
     spyPrompt
       .mockReturnValueOnce(`Paragraph | text="${paragraphText}";`)
       .mockReturnValueOnce(`Details | title="${detailsTitle}";`);
-    render(<App />);
-    jest.runAllTimers();
+    act(() => {
+      render(<App />);
+      jest.runAllTimers();
+    });
 
     expect(await screen.findByText(detailsTitle)).toBeInTheDocument();
     expect(await screen.findByText(paragraphText)).toBeInTheDocument();
